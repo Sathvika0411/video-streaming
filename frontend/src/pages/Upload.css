@@ -50,3 +50,27 @@
 .upload-form button:hover {
   background-color: #3d4ee3;
 }
+/* Simple 14‑px spinning circle */
+.spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid transparent;
+  border-top-color: #fff;      /* or any colour */
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Optional: greyed‑out button look when disabled */
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
