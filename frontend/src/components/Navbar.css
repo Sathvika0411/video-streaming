@@ -48,17 +48,26 @@
   transition: 0.3s;
 }
 
-/* Mobile Styles */
+/* make the parent the positioning‑context */
+.navbar {            /* or whatever class wraps brand + burger */
+  position: relative;
+}
+
+/* Mobile ------------------------------------------------------------------ */
 @media screen and (max-width: 768px) {
   .navbar-links {
     position: absolute;
     top: 64px;
-    right: 0;
+
+    /* NEW — give it the same side padding as your white card */
+    left: 20px;          /* push it a bit away from the extreme left  */
+    right: 20px;         /* keep the same gap on the right            */
+    width: auto;         /* let left/right control the width          */
+
     background-color: #5f6fff;
     flex-direction: column;
-    width: 100%;
     padding: 20px;
-    display: none;
+    display: none;       /* toggled with the .show class */
   }
 
   .navbar-links.show {
