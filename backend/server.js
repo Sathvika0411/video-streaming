@@ -17,7 +17,16 @@ import videoRoutes from './routes/videoRoutes.js';
 app.use('/api/auth', authRoutes);
 app.use('/api/videos', videoRoutes);
 
-// MongoDB connection
+// Optional health check route (recommended for Render)
+app.get('/', (req, res) => {
+  res.send('API is running...');
+});
+
+// Use Render's dynamic port
+const PORT = process.env.PORT || 8000;
+
 mongoose.connect(process.env.MONGO_URI)
-  .then(() => app.listen(8000, () => console.log('Server running on 8000')))
+  .then(() => {
+    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+  })
   .catch(err => console.log(err));
