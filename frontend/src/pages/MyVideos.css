@@ -1,0 +1,63 @@
+.myvideos-container {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.myvideos-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.no-videos {
+  text-align: center;
+  font-size: 18px;
+  color: #777;
+}
+
+.video-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.video-card {
+  background: #f4f6ff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+}
+
+.video-card h3 {
+  margin: 0 0 10px;
+  color: #444;
+}
+
+.video-card p {
+  margin: 4px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.watch-link {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 16px;
+  background-color: #5f6fff;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.watch-link:hover {
+  background-color: #3d4fd0;
+}
