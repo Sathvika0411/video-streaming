@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'http://localhost:8000/api',
+  baseURL: 'https://video-streaming-qb0h.onrender.com/api',
 });
 
 instance.interceptors.request.use((config) => {
